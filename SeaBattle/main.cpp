@@ -12,6 +12,18 @@ void shipsSet(int size, int field[10][10])
 		str = rand() % 10;
 		sto = rand() % 10;
 		dir = rand() % 4;
+		if (str < 0 || str >= 10 || sto < 0 || sto >= 10)
+		{
+			check = 0;
+			continue;
+		}
+		else if (field[str][sto] == 1 || field[str - 1][sto] == 1 || field[str - 1][sto + 1] == 1 || field[str][sto + 1] == 1 || field[str + 1][sto + 1] == 1 ||
+			field[str + 1][sto] == 1 || field[str + 1][sto - 1] == 1 || field[str][sto - 1] == 1 || field[str - 1][sto - 1] == 1)
+		{
+			check = 0;
+			continue;
+		}
+		
 		int cSize = 0;
 		while(cSize != size)
 		{
@@ -21,8 +33,8 @@ void shipsSet(int size, int field[10][10])
 				cSize = 0;
 				break;
 			}
-			else if (field[str][sto] == 1 || field[str - 1][sto] == 1 || field[str - 1][sto + 1] == 1 || field[str][sto + 1] == 1 || field[str + 1][sto + 1]
-				|| field[str + 1][sto] == 1 || field[str + 1][sto - 1] == 1 || field[str][sto - 1] == 1 || field[str - 1][sto - 1] == 1)
+			else if (field[str][sto] == 1 || field[str - 1][sto] == 1 || field[str - 1][sto + 1] == 1 || field[str][sto + 1] == 1 || field[str + 1][sto + 1] == 1 || 
+				     field[str + 1][sto] == 1 || field[str + 1][sto - 1] == 1 || field[str][sto - 1] == 1 || field[str - 1][sto - 1] == 1)
 			{
 				check = 0;
 				cSize = 0;

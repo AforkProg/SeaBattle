@@ -1,3 +1,3 @@
 ﻿  main.cpp
-c:\users\user\source\repos\seabattle\seabattle\main.cpp(113): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\users\user\source\repos\seabattle\seabattle\main.cpp(125): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   SeaBattle.vcxproj -> C:\Users\User\source\repos\SeaBattle\Debug\SeaBattle.exe
